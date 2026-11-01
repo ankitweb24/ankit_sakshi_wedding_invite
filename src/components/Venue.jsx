@@ -1,0 +1,3 @@
+import React from 'react';
+import { MapPin, ArrowUpRight } from 'lucide-react';import { wedding } from '../data/weddingData';
+export default function Venue(){return <section className="venue-section section-wrap" id="venue"><div><span className="eyebrow">We can't wait to see you</span><h2>Find your way<br/><em>to our celebration</em></h2><p className="venue-name"><MapPin size={18}/>{wedding.venue.name}</p><p>{wedding.venue.address}</p><a className="gold-button" href="https://maps.app.goo.gl/zQZtaVYpkKDpV9eQ6" target="_blank" rel="noreferrer">Get directions <ArrowUpRight size={16}/></a></div><div className="map-art"><div className="map-lines"/><div className="map-pin"><MapPin size={28}/></div><span>CELEBRATE WITH US</span></div></section>}

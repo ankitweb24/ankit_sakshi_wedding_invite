@@ -1,0 +1,7 @@
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Float, Sparkles } from '@react-three/drei';
+import React, { Suspense, useRef } from 'react';
+import * as THREE from 'three';
+function Bloom({position,scale=1,color='#d99b9b'}){const group=useRef();useFrame(({clock})=>{if(group.current)group.current.rotation.y=Math.sin(clock.elapsedTime*.5+position[0])*0.18});return <group ref={group} position={position} scale={scale}><mesh position={[0,0,0]}><sphereGeometry args={[.12,16,16]}/><meshStandardMaterial color="#c69b50" metalness={.7} roughness={.3}/></mesh>{Array.from({length:8},(_,i)=><mesh key={i} rotation={[0,0,i*Math.PI/4]} position={[Math.cos(i*Math.PI/4)*.12,Math.sin(i*Math.PI/4)*.12,0]}><sphereGeometry args={[.12,16,12]}/><meshStandardMaterial color={color} roughness={.55}/></mesh>)}</group>}
+function Garden(){return <><ambientLight intensity={1.1}/><directionalLight position={[3,5,4]} intensity={2}/><Float speed={1} rotationIntensity={.15} floatIntensity={.3}><Bloom position={[-1.7,.4,0]} scale={1.6}/><Bloom position={[1.5,-.2,-.5]} scale={1.2} color="#f0d8d1"/><Bloom position={[0,1.2,-1]} scale={.8} color="#e8c4bf"/></Float><Sparkles count={70} scale={5} size={2} speed={.25} color="#d5b36d"/><mesh rotation={[-Math.PI/2,0,0]} position={[0,-1.2,0]}><planeGeometry args={[200,200]}/><meshStandardMaterial color="#f8eee7"/></mesh></>}
+export default function FlowerGarden3D(){return <div className="garden-canvas"><Canvas camera={{position:[0,0,5],fov:45}} dpr={[1,1.5]}><Suspense fallback={null}><Garden/></Suspense></Canvas></div>}

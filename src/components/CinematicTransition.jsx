@@ -1,0 +1,3 @@
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+export default function CinematicTransition({onDone}) { useEffect(()=>{const t=setTimeout(onDone,1900);return()=>clearTimeout(t)},[onDone]);return <motion.div className="transition-screen" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}><div className="transition-glow"/><motion.div className="transition-title" initial={{scale:.7,opacity:0}} animate={{scale:1,opacity:1}} transition={{duration:1}}>Ankit <span>&</span> Sakshi</motion.div><div className="petal-field">{Array.from({length:34},(_,i)=><i key={i} style={{'--i':i}}/>)}</div></motion.div> }

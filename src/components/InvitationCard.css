@@ -1,0 +1,423 @@
+
+.royal-invitation-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 120px 20px 110px;
+  background:
+    radial-gradient(ellipse at 50% 50%, #f7e5dc, transparent 65%),
+    linear-gradient(135deg, #fffaf2, #f5e5dc);
+  color: #765541;
+}
+
+.invitation-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  filter: blur(110px);
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.invitation-glow-one {
+  top: 15%;
+  left: -160px;
+  background: #e6b7ac;
+}
+
+.invitation-glow-two {
+  right: -150px;
+  bottom: 5%;
+  background: #e7d0a4;
+}
+
+/* Intro */
+
+.invitation-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.invitation-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #a9896d;
+}
+
+.invitation-eyebrow i {
+  width: 35px;
+  height: 1px;
+  background: #c5a477;
+}
+
+.invitation-intro h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(50px, 6vw, 75px);
+  line-height: 0.95;
+  font-weight: 400;
+  margin: 28px 0;
+}
+
+.invitation-intro h2 em {
+  color: #bc8b80;
+}
+
+.invitation-intro p {
+  color: #a18a77;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* Paper */
+
+.royal-paper-wrapper {
+  width: min(100%, 700px);
+  margin: auto;
+  perspective: 1200px;
+}
+
+.royal-paper {
+  position: relative;
+  padding: 14px;
+  background: linear-gradient(
+    140deg,
+    #f6e7c8,
+    #c49a64,
+    #fff2d8,
+    #b78b58
+  );
+  box-shadow:
+    0 35px 80px #88634628,
+    0 10px 25px #88634618;
+  transform-style: preserve-3d;
+}
+
+.royal-paper-border {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  min-height: 820px;
+  padding: 65px 40px;
+  background:
+    radial-gradient(circle at 50% 50%, #fffdf8, transparent 70%),
+    #fffaf0;
+  border: 1px solid #b99765;
+}
+
+.royal-paper-border::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #c7a675;
+  pointer-events: none;
+}
+
+.royal-paper-border::after {
+  content: '';
+  position: absolute;
+  inset: 19px;
+  border: 1px dashed #c7a67570;
+  pointer-events: none;
+}
+
+.paper-corner {
+  position: absolute;
+  color: #b58b5c;
+  font-size: 45px;
+  z-index: 2;
+}
+
+.top-left {
+  top: 18px;
+  left: 22px;
+}
+
+.top-right {
+  top: 18px;
+  right: 22px;
+  transform: scaleX(-1);
+}
+
+.bottom-left {
+  bottom: 18px;
+  left: 22px;
+  transform: scaleY(-1);
+}
+
+.bottom-right {
+  bottom: 18px;
+  right: 22px;
+  transform: rotate(180deg);
+}
+
+/* Header */
+
+.paper-header,
+.paper-message,
+.paper-couple,
+.paper-date-seal,
+.paper-footer {
+  position: relative;
+  z-index: 2;
+}
+
+.paper-ganesh {
+  font-family: serif;
+  font-size: 23px;
+  color: #a77b48;
+  display: block;
+  margin-bottom: 22px;
+}
+
+.paper-symbol {
+  color: #c19a65;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.paper-small-label {
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #a88a6d;
+}
+
+/* Message */
+
+.paper-message {
+  margin: 48px auto 30px;
+  max-width: 430px;
+}
+
+.paper-message p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.6;
+  color: #8c7461;
+  margin: 8px 0;
+}
+
+/* Couple */
+
+.paper-couple h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(55px, 8vw, 82px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #a7776c;
+  margin: 10px 0;
+}
+
+.paper-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 15px 0;
+}
+
+.paper-heart span {
+  width: 60px;
+  height: 1px;
+  background: #c6a477;
+}
+
+.paper-heart b {
+  font-size: 27px;
+  color: #bc8b80;
+  font-weight: 400;
+}
+
+/* Date seal */
+
+.paper-date-seal {
+  width: 230px;
+  margin: 40px auto;
+  padding: 20px 15px;
+  border: 1px solid #c5a477;
+  outline: 1px dashed #c5a47780;
+  outline-offset: 5px;
+  background: #fffaf1;
+}
+
+.seal-top,
+.seal-bottom {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: #a9896d;
+}
+
+.seal-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.seal-date strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 65px;
+  line-height: 1;
+  font-weight: 400;
+  color: #a7786b;
+}
+
+.seal-date div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.seal-date b {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #957251;
+}
+
+.seal-date span {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #a9896d;
+}
+
+/* Footer */
+
+.paper-flourish {
+  font-size: 24px;
+  color: #bd9868;
+  margin-bottom: 20px;
+}
+
+.paper-footer p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #947b68;
+  line-height: 1.6;
+}
+
+.paper-signature {
+  display: block;
+  margin-top: 25px;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #b18a69;
+}
+
+/* Gold shimmer */
+
+.paper-shimmer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    #ffffff55 48%,
+    transparent 60%
+  );
+  transform: translateX(-150%);
+  animation: paperShimmer 7s ease-in-out infinite;
+}
+
+@keyframes paperShimmer {
+  0%, 65% {
+    transform: translateX(-150%);
+  }
+  85%, 100% {
+    transform: translateX(150%);
+  }
+}
+
+/* Bottom */
+
+.invitation-bottom-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 55px;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #a9896d;
+}
+
+.invitation-bottom-note span {
+  color: #bd8d82;
+  font-size: 19px;
+}
+
+/* Mobile */
+
+@media(max-width: 600px) {
+  .royal-invitation-section {
+    padding: 85px 15px;
+  }
+
+  .invitation-intro h2 {
+    font-size: 55px;
+  }
+
+  .royal-paper {
+    padding: 8px;
+  }
+
+  .royal-paper-border {
+    min-height: 700px;
+    padding: 55px 20px;
+  }
+
+  .paper-ganesh {
+    font-size: 19px;
+  }
+
+  .paper-message {
+    margin-top: 38px;
+  }
+
+  .paper-message p {
+    font-size: 16px;
+  }
+
+  .paper-couple h2 {
+    font-size: 59px;
+  }
+
+  .paper-date-seal {
+    width: 205px;
+    margin: 35px auto;
+  }
+
+  .paper-footer p {
+    font-size: 15px;
+  }
+
+  .paper-signature {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .paper-corner {
+    font-size: 29px;
+  }
+
+  .invitation-bottom-note {
+    font-size: 7px;
+    letter-spacing: 1px;
+    gap: 8px;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .paper-shimmer {
+    animation: none;
+  }
+}

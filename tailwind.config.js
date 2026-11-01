@@ -1,0 +1,1 @@
+export default { content: ['./index.html','./src/**/*.{js,ts,jsx,tsx}'], theme: { extend: { colors: { ivory:'#f8f0e8', rose:'#d9a7a0', champagne:'#c7a66a' }, fontFamily: { display:['Playfair Display','serif'], script:['Great Vibes','cursive'], body:['Poppins','sans-serif'] } } }, plugins: [] }

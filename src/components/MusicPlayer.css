@@ -1,0 +1,84 @@
+
+.music-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 9999;
+
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+
+  color: #fff;
+  background: linear-gradient(135deg, #c7a16e, #947044);
+
+  box-shadow: 0 8px 30px rgba(120, 82, 42, 0.3);
+
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.music-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 35px rgba(120, 82, 42, 0.4);
+}
+
+.music-button.is-playing {
+  animation: musicGlow 2s infinite;
+}
+
+.music-ripple {
+  position: absolute;
+  inset: -5px;
+  border: 1px solid #c7a16e;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.music-button.is-playing .music-ripple {
+  animation: musicRipple 2s infinite;
+}
+
+@keyframes musicRipple {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes musicGlow {
+  50% {
+    box-shadow: 0 8px 35px rgba(190, 145, 88, 0.55);
+  }
+}
+
+@media (max-width: 600px) {
+  .music-button {
+    right: 17px;
+    bottom: 18px;
+    width: 49px;
+    height: 49px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .music-button,
+  .music-button.is-playing,
+  .music-button.is-playing .music-ripple {
+    animation: none;
+    transition: none;
+  }
+}

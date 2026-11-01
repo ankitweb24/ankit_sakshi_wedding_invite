@@ -1,0 +1,2 @@
+import React from 'react';
+export default function Footer(){return <footer className="footer"><div className="footer-flourish">❦</div><span className="eyebrow">The next chapter starts here</span><h2>Forever <em>begins</em></h2><div className="footer-names">Ankit <span>&</span> Sakshi</div><p>24 November 2026 · With love, always.</p><div className="footer-bottom">MADE WITH LOVE <span>✧</span> 2026</div></footer>}

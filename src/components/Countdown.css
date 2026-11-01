@@ -1,0 +1,350 @@
+
+.luxury-countdown {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 115px 20px 95px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 45%, #f8e6df, transparent 60%),
+    linear-gradient(135deg, #fffaf2, #f5e7df, #fff9f0);
+  color: #795744;
+}
+
+.countdown-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.35;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.countdown-glow-left {
+  left: -150px;
+  top: 20%;
+  background: #e9bcb5;
+}
+
+.countdown-glow-right {
+  right: -150px;
+  bottom: 0;
+  background: #e8d0a5;
+}
+
+.countdown-heading {
+  position: relative;
+  z-index: 1;
+}
+
+.countdown-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #a9896d;
+}
+
+.countdown-eyebrow i {
+  width: 35px;
+  height: 1px;
+  background: #c6a477;
+}
+
+.countdown-heading h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 400;
+  line-height: 0.95;
+  margin: 30px 0 20px;
+  color: #755542;
+}
+
+.countdown-heading h2 em {
+  color: #bd8d82;
+  font-weight: 400;
+}
+
+.countdown-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px auto;
+}
+
+.countdown-divider span {
+  width: 45px;
+  height: 1px;
+  background: #c6a477;
+}
+
+.countdown-divider b {
+  font-size: 22px;
+  color: #c08b80;
+  font-weight: 400;
+}
+
+.countdown-heading p {
+  color: #987e6c;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+}
+
+/* Countdown cards */
+
+.luxury-countdown-grid {
+  max-width: 850px;
+  margin: 65px auto 45px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+.luxury-time-card {
+  position: relative;
+  padding: 1px;
+  background: linear-gradient(
+    145deg,
+    #fff7e7,
+    #c5a06d,
+    #f5dfcf,
+    #b68b65
+  );
+  box-shadow:
+    0 18px 45px #a77d5c18,
+    0 4px 12px #a77d5c10;
+  border-radius: 4px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.luxury-time-card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 25px 50px #a77d5c30;
+}
+
+.time-card-inner {
+  min-height: 180px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    #fffdf8,
+    #f8ebe5
+  );
+  border: 1px solid #fff8e9;
+  border-radius: 3px;
+}
+
+.time-card-inner::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #d5bb9650;
+  pointer-events: none;
+}
+
+.time-card-inner::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    #e9c7b8aa,
+    transparent 70%
+  );
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.time-card-top,
+.time-card-bottom {
+  position: absolute;
+  color: #bd9b70;
+  font-size: 17px;
+  z-index: 2;
+}
+
+.time-card-top {
+  top: 13px;
+}
+
+.time-card-bottom {
+  bottom: 10px;
+}
+
+.time-number {
+  perspective: 500px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-number strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(55px, 7vw, 78px);
+  font-weight: 500;
+  line-height: 1;
+  color: #9f7766;
+  font-variant-numeric: tabular-nums;
+  display: block;
+}
+
+.time-card-label {
+  position: relative;
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  margin-top: 10px;
+  color: #aa8c71;
+}
+
+/* Wedding date */
+
+.countdown-date-signature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 40px auto 30px;
+  text-align: left;
+}
+
+.countdown-date-signature > span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 75px;
+  line-height: 1;
+  color: #b98276;
+}
+
+.countdown-date-signature div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.countdown-date-signature b {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #8e6d55;
+  font-weight: 500;
+}
+
+.countdown-date-signature small {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #ad8e76;
+}
+
+.countdown-bottom-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #ad9179;
+  margin-top: 35px;
+}
+
+.countdown-complete {
+  padding: 60px 15px;
+}
+
+.countdown-complete h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(35px, 6vw, 65px);
+  color: #a7796e;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.countdown-complete p {
+  color: #927662;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.complete-heart {
+  font-size: 65px;
+  color: #c18c80;
+}
+
+.countdown-error {
+  padding: 30px;
+  color: #a55;
+  text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .luxury-countdown {
+    padding: 85px 17px 70px;
+  }
+
+  .countdown-heading h2 {
+    font-size: 55px;
+  }
+
+  .countdown-heading p {
+    font-size: 10px;
+  }
+
+  .luxury-countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    max-width: 380px;
+    margin-top: 45px;
+  }
+
+  .time-card-inner {
+    min-height: 145px;
+  }
+
+  .time-number strong {
+    font-size: 65px;
+  }
+
+  .time-card-label {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .countdown-date-signature > span {
+    font-size: 60px;
+  }
+
+  .countdown-date-signature b {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .countdown-bottom-text {
+    font-size: 7px;
+    letter-spacing: 2px;
+    line-height: 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .luxury-time-card {
+    transition: none;
+  }
+}
